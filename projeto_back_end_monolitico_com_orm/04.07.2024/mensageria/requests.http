@@ -1,0 +1,14 @@
+### Criar uma nova mensagem com corpo
+POST http://localhost:8080/mensagens
+Content-Type: application/json
+
+{
+  "assunto": "Assunto da Mensagem",
+  "dataEnvio": "2024-07-11",
+  "mensagemCorpo": {
+    "descricao": "Corpo da mensagem"
+  }
+}
+
+### Obter todas as mensagens
+GET http://localhost:8080/mensagens

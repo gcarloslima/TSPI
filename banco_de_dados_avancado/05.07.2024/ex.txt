@@ -1,0 +1,32 @@
+-- BD MePoupe
+-- Cliente(cod_cliente, nome, CPF,sexo, dt_nasc, Telefone, email)
+-- Conta_corrente(cod_conta, dt_hora_abertura, saldo, status, cod_cliente)
+-- cod_cliente referencia cliente
+-- Registro_Saque(cod_saque, cod_conta, dt_saque, valor_saque)
+-- cod_conta referencia conta
+-- Registro_Deposito(cod_deposito, cod_conta, dt_deposito, valor_deposito)
+-- cod_conta referencia conta
+-- 1) Insira na base de dados:
+-- a. 2 Clientes, 2 contas, 8 registros de depósitos e 6 registros de saques
+-- distribuídos pelas diversas contas.
+-- 
+-- 2) Crie o procedimento sp_insere_cli que irá receber como dados de entrada o nome,
+-- CPF, sexo, data de nascimento, telefone e email de um cliente e fará a inserção na
+-- tabela cliente. Validar o preenchimento de campos obrigatórios.
+-- Cliente(cod_cliente, nome, CPF,sexo, dt_nasc, Telefone, email)
+-- 3) Faça um procedimento para registrar uma transferência de uma conta para outra:
+-- Observações:
+-- • Criar a tabela registro de transferência antes de fazer a criação do procedimento.
+-- • Campos: codigo da transferência, codigo da conta de origem, codigo da conta de
+-- destino, valor da transferência, data e hora.
+-- • Parâmetros de entrada: codigo da conta de origem, codigo da conta de
+-- destino,valor da transferência.
+-- • Validar se a conta de origem tem saldo suficiente antes de efetuar a transferência.
+-- • Atualizar o saldo da conta de origem e da conta de destino.
+-- 4) Crie um procedimento que terá como entrada uma data de inicial e uma data final e irá
+-- gerar um relatório contendo o nome do cliente, número da conta e o valor total de depósitos
+-- realizados para a conta no período informado. Ordenar pelo valor total dos depósitos.
+-- 5)Crie um procedimento para fazer o relatório anual das contas, informando como entrada o
+-- ano e código do relatório desejado (1: total de Saques ou 2: total de depósitos). O relatório
+-- deverá conter o número da conta, mês , total de saques (se código do relatório for 1) ou total
+-- de depósitos (se código do relatório for 2).

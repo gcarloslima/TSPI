@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: fantasy;
+}
+
+.presentation {
+    margin: 1rem 0;
+}
+
+main > section:nth-child(even) {
+    background-color: #EAEAEA;
+}
+
+main > section:nth-child(even) > .boxGrid > .box {
+    border: 1px solid lightgray;
+}
+
+main > section:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.boxGrid {
+    width: 80%;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+header, footer {
+    font-size: 20px;
+    background-color: black;
+    text-align: center;
+    color: white;
+    padding: 2rem 0;
+}
+
+.classenome-34

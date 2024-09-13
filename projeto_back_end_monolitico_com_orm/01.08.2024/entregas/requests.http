@@ -1,0 +1,83 @@
+### Pacote
+
+###
+
+# Listar todos os pacotes
+GET http://localhost:8080/pacotes
+
+###
+
+# Criar um novo pacote
+POST http://localhost:8080/pacotes
+Content-Type: application/json
+
+{
+  "id": "BR12345678",
+  "destinatario": "Bruno",
+  "status": "pendente"
+}
+
+###
+
+# Obter detalhes de um pacote específico
+GET http://localhost:8080/pacotes/1
+
+###
+
+# Atualizar um pacote
+PUT http://localhost:8080/pacotes/1
+Content-Type: application/json
+
+{
+  "id": "BR12345678",
+  "destinatario": "Bruno",
+  "status": "em trânsito"
+}
+
+###
+
+# Deletar um pacote
+DELETE http://localhost:8080/pacotes/1
+
+### Rastreamento
+
+###
+
+# Adicionar um novo rastreamento
+POST http://localhost:8080/rastreamentos?id=1
+Content-Type: application/json
+
+{
+  "dataHora": "2024-07-31",
+  "destinatario": "Carlos",
+  "status": "pendente",
+  "localizacao": "São Paulo - SP"
+}
+
+###
+
+# Obter todas etapas de rastreamento de um pacote específico
+GET http://localhost:8080/rastreamentos/1
+
+###
+
+### Endereço
+
+# Definir o endereço de um pacote
+POST http://localhost:8080/enderecos?id=1
+Content-Type: application/json
+
+{
+  "rua": "Rua Z",
+  "numero": "1000",
+  "cidade": "Canápolis",
+  "estado": "Minas Gerais",
+  "cep": "38380000"
+}
+
+###
+
+# Obter o endereço de um pacote específico
+GET http://localhost:8080/enderecos/1
+
+###

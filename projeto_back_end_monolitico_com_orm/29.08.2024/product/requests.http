@@ -1,0 +1,23 @@
+### Retorna todos os itens que foram vendidos sem desconto
+GET http://localhost:8080/api/nota-fiscal/desconto?desconto=0
+Accept: application/json
+
+### Retorna todos os itens que foram vendidos com desconto
+GET http://localhost:8080/api/nota-fiscal/desconto/greater-than?desconto=0
+Accept: application/json
+
+### Retorna todos os itens e ordena o resultado por VALOR_UNIT do maior valor para o menor
+GET http://localhost:8080/api/nota-fiscal/order-by-valor-unit
+Accept: application/json
+
+### Retorna o produto que mais vendeu em uma mesma NF
+GET http://localhost:8080/api/nota-fiscal/top-by-quantidade
+Accept: application/json
+
+### Consulta as NF que foram vendidas mais de 10 unidades de pelo menos um produto
+GET http://localhost:8080/api/nota-fiscal/quantidade/greater-than?quantidade=10
+Accept: application/json
+
+### Pesquisa o valor total das NF, onde esse valor seja maior que 500, e ordena o resultado do maior valor para o menor
+GET http://localhost:8080/api/nota-fiscal/valor-total/greater-than?valor=500
+Accept: application/json

@@ -1,0 +1,28 @@
+### Obter todos os posts
+GET http://localhost:8080/post
+Accept: application/json
+
+###
+
+### Criar um novo post
+POST http://localhost:8080/post
+Content-Type: application/json
+
+{
+  "title": "Meu primeiro post"
+}
+
+###
+
+### Adicionar um comentário a um post
+POST http://localhost:8080/post/1/comments
+Content-Type: application/json
+
+{
+  "review": "Este é um comentário"
+}
+
+###
+
+### Remover um comentário de um post
+DELETE http://localhost:8080/post/1/comments/1

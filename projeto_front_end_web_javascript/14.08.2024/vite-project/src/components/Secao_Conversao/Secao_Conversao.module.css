@@ -1,0 +1,37 @@
+input[type="text"], 
+input[type="email"] {
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 0.3rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    background-color: #F5E6D3;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus {
+    border-bottom-color: #4E342E;
+}
+
+input[type="button"] {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    outline: none;
+    border: 3px solid white;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="button"]:hover {
+    cursor: pointer;
+    background-color: #4E342E;
+    color: #fff;
+}
+
+input[type="button"]:active {
+    transform: scale(0.95);
+}

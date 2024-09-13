@@ -1,0 +1,136 @@
+### ItemDeLeilao
+
+# Criar um novo item de leilão
+POST http://localhost:8080/itemdeleilao
+Content-Type: application/json
+
+{
+  "nome": "Antiga Mesa de Madeira",
+  "valorMinimo": 200.00,
+  "leilaoAberto": true,
+  "lancesRecebidos": [
+    {
+      "valor": 300.00,
+      "participante": {
+        "id": 1
+      }
+    },
+    {
+      "valor": 400.00,
+      "participante": {
+        "id": 2
+      }
+    },
+    {
+      "valor": 500.00,
+      "participante": {
+        "id": 3
+      }
+    }
+  ],
+  "lanceVencedor": {
+      "valor": 800.00,
+      "participante": {
+        "id": 4
+      }
+  }
+}
+
+###
+
+# Listar todos os itens de leilão
+GET http://localhost:8080/itemdeleilao
+
+###
+
+# Obter detalhes de um item de leilão específico
+GET http://localhost:8080/itemdeleilao/1
+
+###
+
+# Atualizar um item de leilão
+PUT http://localhost:8080/itemdeleilao/1
+Content-Type: application/json
+
+{
+  "nome": "Antiga Mesa de Madeira - Restaurada",
+  "valorMinimo": 250.00,
+  "leilaoAberto": false
+}
+
+###
+
+# Deletar um item de leilão
+DELETE http://localhost:8080/itemdeleilao/1
+
+###
+
+### Lance
+
+# Listar todos os lances
+GET http://localhost:8080/lance
+
+###
+
+# Obter detalhes de um lance específico
+GET http://localhost:8080/lance/1
+
+###
+
+# Atualizar um lance
+PUT http://localhost:8080/lance/1
+Content-Type: application/json
+
+{
+  "valor": 450.00,
+  "participante": {
+    "id": 2
+  },
+  "itemDeLeilao": {
+    "id": 2
+  }
+}
+
+###
+
+# Deletar um lance
+DELETE http://localhost:8080/lance/1
+
+###
+
+### Participante
+
+# Criar um novo participante
+POST http://localhost:8080/participante
+Content-Type: application/json
+
+{
+  "nome": "João da Silva",
+  "cpf": "43965814087"
+}
+
+###
+
+# Listar todos os participantes
+GET http://localhost:8080/participante
+
+###
+
+# Obter detalhes de um participante específico
+GET http://localhost:8080/participante/1
+
+###
+
+# Atualizar um participante
+PUT http://localhost:8080/participante/1
+Content-Type: application/json
+
+{
+  "nome": "João da Silva Souza",
+  "cpf": "123.456.789-00"
+}
+
+###
+
+# Deletar um participante
+DELETE http://localhost:8080/participante/1
