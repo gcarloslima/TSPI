@@ -5,14 +5,14 @@ import ContentGrid from './components/ContentGrid';
 function App() {
 
   const items = [
-    { title: 'Item 1', src: 'biblioteca.png' },
-    { title: 'Item 2', src: 'biblioteca.png' },
-    { title: 'Item 3', src: 'biblioteca.png' },
-    { title: 'Item 4', src: 'biblioteca.png' },
-    { title: 'Item 5' },
-    { src: 'biblioteca.png' },
-    { title: 'Item 7' },
-    { src: 'biblioteca.png' },
+    { id: 1, title: 'Item 1', src: 'biblioteca.png' },
+    { id: 2, title: 'Item 2', src: 'biblioteca.png' },
+    { id: 3, title: 'Item 3', src: 'biblioteca.png' },
+    { id: 4, title: 'Item 4', src: 'biblioteca.png' },
+    { id: 5, title: 'Item 5' },
+    { id: 6, src: 'biblioteca.png' },
+    { id: 7, title: 'Item 7' },
+    { id: 8, src: 'biblioteca.png' },
   ]
 
   return (

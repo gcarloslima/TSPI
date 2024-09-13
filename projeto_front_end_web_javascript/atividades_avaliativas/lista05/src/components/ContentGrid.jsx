@@ -6,7 +6,7 @@ function ContentGrid({items}) {
     return (
         <div className='contentGrid'>
             {items.map((item, index) => (
-                <ContentBox key={index} title={item.title} src={item.src} />
+                <ContentBox key={item.id} title={item.title} src={item.src} />
             ))}
         </div>
     );
