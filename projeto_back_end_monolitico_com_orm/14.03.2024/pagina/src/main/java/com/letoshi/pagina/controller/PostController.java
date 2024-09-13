@@ -40,8 +40,8 @@ public class PostController {
 
         @PostMapping
         public Post create(@RequestBody Post item) {
-                Post PostComment = postService.create(item);
-                return PostComment;
+                Post postComment = postService.create(item);
+                return postComment;
         }
 
         @PutMapping("{id}")
