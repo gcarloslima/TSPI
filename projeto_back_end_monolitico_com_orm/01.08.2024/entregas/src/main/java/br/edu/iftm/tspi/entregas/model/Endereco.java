@@ -30,7 +30,7 @@ public class Endereco {
 
     @JsonIgnore
     public String getEnderecoCompleto() {
-        return String.format("Rua: %s,\nNúmero: %s,\nCidade: %s,\nEstado: %s,\nCEP: %s\n",rua, numero, cidade, estado, cep);
+        return String.format("Rua: %s,%nNúmero: %s,%nCidade: %s,%nEstado: %s,%nCEP: %s%n",rua, numero, cidade, estado, cep);
     }
 
 }
