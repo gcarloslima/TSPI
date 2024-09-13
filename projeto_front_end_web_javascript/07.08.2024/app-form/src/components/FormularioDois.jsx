@@ -31,11 +31,11 @@ function FormularioDois() {
     return (
         <form>
             <div>
-                <label htmlFor="">Nome: </label>
+                <label htmlFor="nome">Nome: </label>
                 <input type="text" name="nome" onChange={handleChange} />
             </div>
             <div>
-                <label htmlFor="">E-mail: </label>
+                <label htmlFor="email">E-mail: </label>
                 <input type="email" name="email" onChange={handleChange} />
             </div>
             <p>{JSON.stringify(form, null, 2)}</p>
