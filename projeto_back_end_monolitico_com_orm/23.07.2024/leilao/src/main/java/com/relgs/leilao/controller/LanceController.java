@@ -18,8 +18,11 @@ import com.relgs.leilao.service.LanceService;
 @RequestMapping("lance")
 public class LanceController {
 
-    @Autowired
-    public LanceService service;
+    private final LanceService service;
+
+    public LanceController(LanceService service) {
+        this.service = service;
+    }
 
     @DeleteMapping("/{id}")
     public void deleteById(@PathVariable Long id) {
