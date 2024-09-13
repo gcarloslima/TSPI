@@ -13,15 +13,20 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 public class ExceptionHandlingControllerAdvice {
 
+    private static final String TIMESTAMP = "timestamp";
+    private static final String STATUS = "status";
+    private static final String ERROR = "error";
+    private static final String MESSAGE = "message";
+
     @ExceptionHandler(ResourceNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
     @ResponseBody
     public Map<String, Object> handleResourceNotFoundException(ResourceNotFoundException ex) {
         Map<String, Object> response = new HashMap<>();
-        response.put("timestamp", LocalDateTime.now());
-        response.put("status", HttpStatus.NOT_FOUND.value());
-        response.put("error", "Not Found");
-        response.put("message", ex.getMessage());
+        response.put(TIMESTAMP, LocalDateTime.now());
+        response.put(STATUS, HttpStatus.NOT_FOUND.value());
+        response.put(ERROR, "Not Found");
+        response.put(MESSAGE, ex.getMessage());
         return response;
     }
 
@@ -30,10 +35,10 @@ public class ExceptionHandlingControllerAdvice {
     @ResponseBody
     public Map<String, Object> handleValidationException(ValidationException ex) {
         Map<String, Object> response = new HashMap<>();
-        response.put("timestamp", LocalDateTime.now());
-        response.put("status", HttpStatus.BAD_REQUEST.value());
-        response.put("error", "Bad Request");
-        response.put("message", ex.getMessage());
+        response.put(TIMESTAMP, LocalDateTime.now());
+        response.put(STATUS, HttpStatus.BAD_REQUEST.value());
+        response.put(ERROR, "Bad Request");
+        response.put(MESSAGE, ex.getMessage());
         return response;
     }
 
@@ -42,10 +47,10 @@ public class ExceptionHandlingControllerAdvice {
     @ResponseBody
     public Map<String, Object> handleGlobalException(Exception ex) {
         Map<String, Object> response = new HashMap<>();
-        response.put("timestamp", LocalDateTime.now());
-        response.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
-        response.put("error", "Internal Server Error");
-        response.put("message", "An unexpected error occurred.");
+        response.put(TIMESTAMP, LocalDateTime.now());
+        response.put(STATUS, HttpStatus.INTERNAL_SERVER_ERROR.value());
+        response.put(ERROR, "Internal Server Error");
+        response.put(MESSAGE, "An unexpected error occurred.");
         return response;
     }
 }
