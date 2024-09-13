@@ -24,8 +24,7 @@ public class LibraryController {
 
         @GetMapping
         public List<Library> getAll() {
-                List<Library> items = libraryService.getAll();
-                return items;
+                return libraryService.getAll();
         }
 
         @GetMapping("{id}")
@@ -35,8 +34,7 @@ public class LibraryController {
 
         @PostMapping
         public Library create(@RequestBody Library item) {
-                Library library = libraryService.create(item);
-                return library;
+                return libraryService.create(item);
         }
 
         @PutMapping("{id}")
