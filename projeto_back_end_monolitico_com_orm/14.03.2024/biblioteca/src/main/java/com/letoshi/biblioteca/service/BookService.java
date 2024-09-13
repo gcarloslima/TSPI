@@ -18,7 +18,7 @@ public class BookService {
 
     public List<Book> getAll() {
         try {
-            List<Book> items = new ArrayList<Book>();
+            List<Book> items = new ArrayList<>();
             bookRepository.findAll().forEach(items::add);
             return items;
         } catch (Exception e) {
